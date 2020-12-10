@@ -1,16 +1,16 @@
-const body = document.querySelector("body");
+
 
 const IMG_NUMBER = 5;
 
 function paintImage(imgNumber){
-    const image = new Image();
-    image.src = `./images/${imgNumber + 1}.jpg`;
-    image.classList.add("bgImage");
-    body.appendChild(image);
+    const bg = document.querySelector(".bg");
+    bg.style.cssText= `background-image:url(./images/${imgNumber}.jpg)`;
+    bg.classList.add("bgImage");
+
 }
 
 function getRandom(){
-    const number = Math.floor(Math.random()* IMG_NUMBER);
+    const number = Math.floor(Math.random()* IMG_NUMBER + 1);
 
     return number;
 }

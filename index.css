@@ -4,9 +4,14 @@ body{
 
 h1, h4, ul, span{
     color: white;
-    transtion: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
-
+h1{
+    margin-bottom: 0px;
+}
+h4{
+    margin-top: 0px;
+}
 .form, .greetings{
     display:none;
 }
@@ -15,7 +20,10 @@ h1, h4, ul, span{
     display:block;
 }
 
-
+body, html{
+    height: 100%;
+    margin:0px;
+}
 @keyframes fadeIn{
 
 from{
@@ -26,13 +34,92 @@ to{
 }
 
 }
+
 .bgImage{
+   
     position: absolute;
     top:0;
     left: 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+    animation: fadeIn .5s linear;
+    width:auto;
+
+}
+
+.center{
+    text-align: center;
+    font-family: "DoHyeon-Regular", Verdana, Tahoma;
+    text-shadow: gray 2px 2px 2px ;
+}
+
+.region{
+    width: auto;
+    height: 200px;
+}
+
+@font-face{
+    font-family: "DoHyeon-Regular";
+    src: url(./Do_Hyeon/DoHyeon-Regular.ttf) format("truetype");
+}
+
+
+input[type=text]{
+    
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 6px;
+    width: 50%;
+    
+    
+}
+input:focus {
+    outline: none;
+}
+
+
+/* font-style,color,size*/
+input[type=text] ,input::placeholder, li{
+    color: white;
+    font-size: 40px;
+    font-style: "DoHyeon-Regular" ;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0px 
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: #ecf0f1;
+
+}
+
+.center-wrapper{
+
+    display:flex;
+}
+.side-left{
+    width: 200px;
+    flex: 1;
+}
+.side-right{
+    width: 200px;
+    flex: 1;
+}
+.bg{
+    display: block;
     width: 100%;
     height:100%;
-    z-index:-1;
-    animation: fadeIn .5s linear;
-
 }
