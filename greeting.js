@@ -24,7 +24,9 @@ function askForName(){
  function paintGreeting(text){
      form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText= `Good Morning ${text}`;
+    const date = new Date();
+     const hours = date.getHours();
+    greeting.innerText= `${hours < 13 ? `Good Morning╰(*°▽°*)╯`:`Good Evening(●'◡'●)`} ${text}`;
  }
  function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
