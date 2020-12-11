@@ -78,6 +78,10 @@ input[type=text]{
     
     
 }
+#askName {
+    width:75%;
+}
+
 input:focus {
     outline: none;
 }
